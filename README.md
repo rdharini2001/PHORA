@@ -1,7 +1,6 @@
 <div align="center">
 
-# PHORA
-### Physiology-Guided Hierarchical Ordinal Radiomics for LI-RADS Classification in Multiphase CT
+# PHORA: Physiology-Guided Hierarchical Ordinal Radiomics for LI-RADS Classification in Multiphase CT
 
 **MICCAI 2026 · AMPLIFAI Challenge**
 
