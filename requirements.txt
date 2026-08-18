@@ -1,0 +1,12 @@
+numpy>=1.26,<3
+pandas>=2.2,<3
+scipy>=1.14,<2
+scikit-learn>=1.5,<2
+xgboost>=2.0,<4
+nibabel>=5.2,<6
+SimpleITK>=2.5,<3
+joblib>=1.4
+matplotlib>=3.8
+tqdm>=4.66
+jupyter>=1.0
+nbconvert>=7.16

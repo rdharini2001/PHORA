@@ -1,0 +1,17 @@
+{
+  "method": "PHORA+ v2",
+  "challenge": "AMPLIFAI MICCAI 2026",
+  "submission_format": "Codabench inference program",
+  "training_cases_eligible_public": 520,
+  "selected_features": 140,
+  "portable_model_format": "PHORA_PORTABLE_XGB_V1",
+  "model_sha256": "d0754090226b91f38c8acb8252d74bd876039fcf5b57ffcfc836f68a0f1fff35",
+  "runtime_dependencies": [
+    "Python 3.10",
+    "numpy (base image)",
+    "pandas (base image)",
+    "scipy (base image)"
+  ],
+  "network_required": false,
+  "output": "/app/output/predictions.csv"
+}

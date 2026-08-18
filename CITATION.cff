@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use PHORA, please cite the associated AMPLIFAI/MICCAI paper."
+title: "PHORA: Physiology-Guided Hierarchical Ordinal Radiomics for LI-RADS Classification in Multiphase CT"
+type: software
+version: 1.0.0
+date-released: 2026-08-18
+authors:
+  - family-names: Raghavan
+    given-names: Dharini
+  - family-names: Madabhushi
+    given-names: Advait
+  - family-names: Singh
+    given-names: Amritpal
+  - family-names: Lebowitz
+    given-names: Mendel
+  - family-names: Modanwal
+    given-names: Gourav
+  - family-names: Madabhushi
+    given-names: Anant
+keywords:
+  - LI-RADS
+  - hepatocellular carcinoma
+  - radiomics
+  - ordinal learning
+  - multiphase CT

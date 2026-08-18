@@ -1,0 +1,12 @@
+\begin{tabular}{lrrrr}
+\toprule
+Feature set & n_features & final_score & adjusted_qwk & special_category_recognition \\
+\midrule
+Morphology only & 37 & 0.482 & 0.473 & 0.533 \\
+Handcrafted radiomics only & 380 & 0.536 & 0.533 & 0.555 \\
+Custom kinetics + spatial & 396 & 0.335 & 0.300 & 0.533 \\
+Context + optimal transport only & 78 & 0.477 & 0.468 & 0.528 \\
+All except handcrafted radiomics & 520 & 0.467 & 0.458 & 0.517 \\
+All inference-safe features & 900 & 0.492 & 0.482 & 0.552 \\
+\bottomrule
+\end{tabular}

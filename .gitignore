@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Raw AMPLIFAI data / extracted NIfTI volumes
+data/
+_extracted/
+*.nii
+*.nii.gz
+batch_*.zip
+train_metadata.csv
+val_metadata.csv
+
+# Local experiment runs
+runs/
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phora-lirads"
+version = "1.0.0"
+description = "Physiology-guided hierarchical ordinal radiomics for LI-RADS classification in multiphase CT"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  {name="Dharini Raghavan"},
+  {name="Advait Madabhushi"},
+  {name="Amritpal Singh"},
+  {name="Mendel Lebowitz"},
+  {name="Gourav Modanwal"},
+  {name="Anant Madabhushi"},
+]
+dependencies = [
+  "numpy>=1.26,<3", "pandas>=2.2,<3", "scipy>=1.14,<2",
+  "scikit-learn>=1.5,<2", "xgboost>=2.0,<4", "nibabel>=5.2,<6",
+  "SimpleITK>=2.5,<3", "joblib>=1.4", "matplotlib>=3.8", "tqdm>=4.66"
+]
+
+[project.optional-dependencies]
+dev = ["jupyter>=1.0", "nbconvert>=7.16", "pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

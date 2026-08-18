@@ -1,0 +1,4 @@
+*.ipynb linguist-language=Python
+*.csv text eol=lf
+*.png binary
+*.pkl.gz binary

@@ -1,0 +1,72 @@
+{
+  "selected_imaging_features": 140,
+  "selected_feature_family_counts": {
+    "handcrafted_radiomics": 70,
+    "spatial_physiology": 60,
+    "context_optimal_transport": 10
+  },
+  "concept_probabilities": 6,
+  "burden_estimates": 5,
+  "latent_features": 11,
+  "clinical_interaction_features": 24,
+  "unified_representation_dimension": 175,
+  "concept_order": [
+    "aphe",
+    "rim_aphe",
+    "washout_venous",
+    "washout_delayed",
+    "capsule_venous",
+    "capsule_delayed"
+  ],
+  "burden_order": [
+    "burden_aphe",
+    "burden_washout_venous",
+    "burden_washout_delayed",
+    "burden_capsule_venous",
+    "burden_capsule_delayed"
+  ],
+  "basis_names": [
+    "rule_pNonRimAPHE",
+    "rule_pRimAPHE",
+    "rule_pWashout",
+    "rule_pCapsule",
+    "rule_expected_major_count",
+    "rule_size10_soft",
+    "rule_size20_soft",
+    "rule_APHE_x_W",
+    "rule_APHE_x_C",
+    "rule_W_x_C",
+    "rule_APHE_x_size10",
+    "rule_APHE_x_size20",
+    "rule_Rim_x_noAPHE",
+    "rule_Rim_x_W",
+    "rule_LR4_plaus",
+    "rule_LR5_plaus",
+    "rule_LRM_plaus",
+    "rule_burden_APHE",
+    "rule_burden_Washout",
+    "rule_burden_Capsule",
+    "rule_burden_coherence",
+    "rule_pA_x_bA",
+    "rule_pW_x_bW",
+    "rule_pC_x_bC"
+  ],
+  "router": {
+    "beta_direct_gate": 0.5,
+    "alpha_ordinal_regression": 0.25,
+    "cutpoint_1": 1.6345297408644857,
+    "cutpoint_2": 2.848409172521497,
+    "cutpoint_3": 3.4284894586950747,
+    "cutpoint_4": 3.8233099243202164,
+    "threshold_lr_m": 0.5071198432558802,
+    "threshold_lr_tiv": 0.1781843112739581,
+    "special_margin": -0.012687806358910245,
+    "nonrim_aphe_lr5_threshold": 0.22222740053848533,
+    "rim_aphe_lr_m_weight": 1.8650389945790522
+  },
+  "inner_training_metrics": {
+    "final_score": 0.6647984342817992,
+    "adjusted_qwk": 0.6801003482252855,
+    "special_category_recognition": 0.5780875886020435
+  }
+}
