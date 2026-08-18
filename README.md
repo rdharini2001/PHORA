@@ -22,7 +22,7 @@
 
 LI-RADS is not naturally a flat seven-class problem. **LR-1→LR-5 are ordered**, while **LR-M and LR-TIV are special clinical categories** that leave the ordinal HCC spectrum. PHORA mirrors that structure: it learns interpretable multiphase imaging descriptors, distills training-only radiologist concepts into inference-time latent features, and combines special-category gating with ordinal experts through a clinically constrained router.
 
-> **In one sentence:** PHORA asks *what the lesion looks like and how it enhances*, learns *which LI-RADS concepts are present*, decides whether the case belongs to the ordinal LR-1–LR-5 pathway or a special category, and then estimates ordinal severity when appropriate.
+> PHORA asks *what the lesion looks like and how it enhances*, learns *which LI-RADS concepts are present*, decides whether the case belongs to the ordinal LR-1–LR-5 pathway or a special category, and then estimates ordinal severity when appropriate.
 
 ## Method at a glance
 
