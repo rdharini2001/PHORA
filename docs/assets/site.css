@@ -6,3 +6,94 @@
 html{scroll-padding-top:75px}
 /* Real saved PHORA validation output records — distinct from the two CT volumes */
 .prediction-demo{margin-top:22px;background:linear-gradient(115deg,#101f2e,#122e37);border:1px solid #82b9b938;padding:31px}.prediction-heading{display:grid;grid-template-columns:1fr 1fr;gap:34px}.prediction-heading h3{font:400 42px/1.02 var(--serif);letter-spacing:-.025em;margin:15px 0}.prediction-heading h3 em{color:var(--gold)}.prediction-heading p{color:#92b1b9;font-size:12px;line-height:1.85}.record-selector{display:flex;flex-wrap:wrap;justify-content:end;align-content:start;gap:8px;margin-top:17px}.record-selector button{font:10px var(--mono);padding:11px 13px;color:#acc8c6;background:#092330;border:1px solid #5b878787}.record-selector button.active{color:#0b2630;background:var(--mint)}.record-body{border-top:1px solid var(--line);margin-top:20px;padding-top:26px;display:grid;grid-template-columns:40% 60%;gap:18px}.record-id{font:35px var(--serif);margin:12px 0}.outcome-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.outcome-grid div{border:1px solid #6d95964c;padding:15px}.outcome-grid span{display:block;color:#8ba9b3;font:9px var(--mono)}.outcome-grid strong{font:30px var(--serif);color:var(--gold)}.record-experts{border-top:1px solid var(--line);margin-top:20px;padding-top:8px}.record-experts div{display:flex;justify-content:space-between;gap:8px;padding:7px 0;color:#91aeb5;font:9px var(--mono)}.record-experts b{color:#d9ece7;font-weight:500}.record-probs{padding:0 18px}.record-chart{display:grid;gap:8px;margin:19px 0}.record-bar{display:grid;grid-template-columns:62px 1fr 51px;align-items:center;gap:9px;font:11px var(--mono);color:#96adb7}.record-bar .track{height:10px;background:#193b48}.record-bar i{height:100%;display:block;background:linear-gradient(90deg,#547f91,#9fd9d0);transition:width .4s}.record-bar.active i{background:linear-gradient(90deg,#bb7b5c,#f0b989)}.record-bar b{font-size:10px;color:#cde0db;text-align:right;font-weight:400}.record-probs p{color:#849da8;font-size:10px;line-height:1.65}@media(max-width:780px){.prediction-heading,.record-body{grid-template-columns:1fr}.record-selector{justify-content:start}.record-probs{padding:15px 0 0}}@media(max-width:540px){.prediction-demo{padding:22px 18px}.record-selector button{font-size:9px;padding:10px}.prediction-heading h3{font-size:35px}.record-id{font-size:31px}}
+
+/* PHORA Clinical Evidence Theatre — paper-associated interactive atlas */
+:root{--signal-warm:#f0a65f;--signal-cool:#50c0e6}
+.signed-legend{display:flex;gap:18px;align-items:center;flex-wrap:wrap;font:10px var(--mono);color:#aac7cb;letter-spacing:.06em}
+.signed-legend span{display:flex;gap:7px;align-items:center}
+.signed-legend i{display:block;height:8px;width:22px;border-radius:8px}
+.signed-legend .warm-swatch{background:linear-gradient(90deg,#b9733b,#f7bb77)}
+.signed-legend .cool-swatch{background:linear-gradient(90deg,#236f98,#74d7ef)}
+.lens-footer{display:block}
+.lens-footer #evidence-readout{font-size:12px;line-height:1.7;color:#9fbcc2;margin:12px 0 10px}
+.signed-stats{display:flex;gap:12px;flex-wrap:wrap;font:10px var(--mono);text-transform:uppercase;color:#afc9cb;letter-spacing:.03em}
+.signed-stats span{padding:8px 10px;background:#1a3441;border:1px solid #345363;border-radius:3px}
+.signed-stats b{font:600 15px var(--sans);margin-right:7px;color:var(--mint)}
+.radiology-interpretation{background:linear-gradient(110deg,#102e3b,#0d202e 60%,#173d46);border-top:1px solid #456e754d;border-bottom:1px solid #456e754d;padding:23px 27px;display:grid;grid-template-columns:1.8fr .85fr;gap:8px 40px;align-items:end}
+.radiology-head{display:flex;justify-content:space-between;gap:20px;grid-column:1/-1}
+.radiology-head #reading-phase-tag{font:10px var(--mono);letter-spacing:.15em;color:#edc9a8}
+.radiology-body strong{font:400 29px var(--serif);letter-spacing:-.015em;color:#f7e9d5}
+.radiology-body p{color:#adc3c7;font:13px/1.75 var(--sans);margin:8px 0 0;max-width:760px}
+.radiology-signature{justify-self:end;text-align:right;display:grid;gap:4px}
+.radiology-signature span,.radiology-signature small{font:10px var(--mono);color:#99bbc0;letter-spacing:.06em}
+.radiology-signature b{font:400 33px var(--serif);color:var(--gold)}
+.decision-theatre{background:radial-gradient(circle at 85% 22%,#25444b 0%,transparent 44%),linear-gradient(155deg,#0e1b2b,#0b1724 60%,#172c35);border-top:1px solid #91d9c127;position:relative;overflow:hidden}
+.decision-theatre:before{content:'';position:absolute;right:5%;top:4%;width:460px;height:460px;border:1px solid #92d0b91e;border-radius:50%;box-shadow:0 0 0 60px #72baa509,0 0 0 150px #89b0bd09;pointer-events:none}
+.decision-theatre .section-head{position:relative}
+.decision-shell{position:relative;border:1px solid #7fa9aa55;background:#0c202d;box-shadow:0 45px 150px #0006;border-radius:7px;overflow:hidden}
+.decision-toolbar{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:22px 29px;border-bottom:1px solid var(--line);background:#122f3b}
+.decision-toolbar>div:first-child{display:grid;gap:6px}
+.decision-toolbar strong{font:400 25px var(--serif);letter-spacing:.03em}
+.cinema-case-selector{display:flex;flex-wrap:wrap;gap:7px}
+.cinema-case-selector button{background:#173845;border:1px solid #6088897b;border-radius:3px;color:#b5d0ce;padding:10px 13px;font:10px var(--mono);transition:background .2s,color .2s}
+.cinema-case-selector button:hover{background:#295360;color:#fff}
+.cinema-case-selector button.active{background:var(--mint);color:#0c3337;border-color:var(--mint)}
+.cinema-main{display:grid;grid-template-columns:54% 46%}
+.cinema-story{min-height:525px;padding:30px 28px 32px;border-right:1px solid var(--line);background:radial-gradient(circle at 60% 90%,#1e44453b,transparent 45%)}
+.cinema-stage-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cinema-play{border:1px solid #95c4b46b;border-radius:3px;background:#173d43;color:#b4f1df;font:10px var(--mono);letter-spacing:.08em;padding:10px 13px;white-space:nowrap}
+.cinema-timebar{--progress:0%;display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;margin:31px 0 30px}
+.cinema-timebar:before{content:'';position:absolute;height:2px;left:10%;right:10%;top:12px;background:linear-gradient(to right,#f1b786 0%,#a3ecd4 var(--progress),#456571 var(--progress),#456571 100%)}
+.cinema-timebar button{border:0;background:none;padding:0 4px;text-align:left;color:#9eb7be;position:relative;min-height:63px;display:flex;flex-direction:column;gap:7px;justify-content:flex-start}
+.cinema-timebar button small{z-index:1;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#173443;border:1px solid #759898;color:#b8d4cf;font:9px var(--mono);transition:background .24s}
+.cinema-timebar button.active small{background:#f0b37c;border-color:#f0b37c;color:#192e3b;box-shadow:0 0 0 6px #f0b37c25}
+.cinema-timebar button b{font:9px/1.25 var(--mono);letter-spacing:.025em;max-width:85px}
+.cinema-timebar button.active b{color:#ffe1bd}
+.cinema-stage-content{min-height:218px;animation:theatreFade .4s ease both}
+@keyframes theatreFade{from{opacity:.45;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.cinema-stage-content h3{font:400 clamp(27px,2.8vw,42px)/1.12 var(--serif);max-width:520px;margin:14px 0;color:#f5f5e9;letter-spacing:-.02em}
+.cinema-stage-content>p{font-size:13px;line-height:1.8;color:#bad0d5;max-width:565px;margin:0 0 23px}
+.cinema-concepts{display:grid;gap:12px;margin-top:18px}
+.cinema-concept-row{display:grid;grid-template-columns:168px 1fr 45px;gap:10px;align-items:center;font:10px var(--mono);color:#b6d4d4}
+.cinema-concept-row b{font:12px var(--mono);color:#f0c9a1;text-align:right}
+.cinema-concept-track{height:7px;background:#2d4c54;border-radius:10px;overflow:hidden}
+.cinema-concept-track i{display:block;height:100%;background:linear-gradient(90deg,#6bc4c0,#eaba86);border-radius:10px;animation:gainGrow .65s cubic-bezier(.2,.65,.12,1) both}
+@keyframes gainGrow{from{transform:scaleX(0);transform-origin:left}to{transform:scaleX(1);transform-origin:left}}
+.cinema-concept-note{border-left:2px solid var(--gold);color:#a9c4c8;line-height:1.65;padding-left:16px;font:13px var(--sans)}
+.cinema-caption{display:flex;align-items:flex-start;gap:17px;margin-top:25px;border-top:1px solid var(--line);padding-top:17px}
+.cinema-caption-line{width:24px;height:2px;flex-shrink:0;background:var(--gold);margin-top:10px}
+.cinema-caption p{margin:0;font-size:11px;line-height:1.72;color:#80a5ae}
+.cinema-output{background:linear-gradient(170deg,#102c38,#0b1c2a);padding:30px 31px 24px}
+.cinema-output-top{border-bottom:1px solid var(--line);padding-bottom:19px}
+.cinema-category{font:400 clamp(55px,5.5vw,90px)/1 var(--serif);letter-spacing:-.05em;color:#f6bb85;margin:13px 0 15px;transition:all .4s}
+.cinema-label-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#9ebdc0;font:10px var(--mono);letter-spacing:.08em}
+.cinema-label-row b{color:#b8e8d6;font-weight:400}
+.cinema-probability{padding:22px 0 15px}
+.cinema-distribution{margin-top:15px;display:grid;gap:9px}
+.cinema-prob-row{display:grid;grid-template-columns:50px 1fr 51px;gap:12px;align-items:center;font:10px var(--mono);color:#a4c3c5}
+.cinema-prob-row.selected{color:#f4c69b}
+.cinema-prob-row b{font-weight:400;text-align:right}
+.cinema-prob-track{height:8px;background:#25434e;overflow:hidden;border-radius:8px}
+.cinema-prob-track i{height:100%;display:block;border-radius:8px;background:#579da5;transition:width .55s ease}
+.cinema-prob-row.selected .cinema-prob-track i{background:linear-gradient(90deg,#be885e,#f2bd87)}
+.cinema-router{border-top:1px solid var(--line);padding-top:17px}
+.cinema-gates{margin:16px 0 19px;display:grid;gap:10px}
+.cinema-gate-row{display:grid;grid-template-columns:104px 1fr;gap:9px;align-items:center}
+.cinema-gate-row small{font:10px var(--mono);color:#9cb5bb}
+.cinema-gate-stack{height:9px;background:#1f3b45;display:flex;border-radius:9px;overflow:hidden}
+.cinema-gate-stack span{height:100%;transition:width .55s ease}
+.cinema-gate-stack span:nth-child(1){background:#8edbc6}.cinema-gate-stack span:nth-child(2){background:#e4af7d}.cinema-gate-stack span:nth-child(3){background:#a28bde}
+.cinema-ordinal{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#8dabb2;font:9px var(--mono)}
+.cinema-ordinal b{color:#e7d1b4;margin-left:7px}
+.cinema-provenance{display:grid;grid-template-columns:200px 1fr auto;gap:15px 25px;align-items:start;border-top:1px solid var(--line);margin-top:26px;padding-top:23px;position:relative}
+.cinema-provenance p{font:12px/1.85 var(--sans);color:#a3bdc4;margin:0;max-width:780px}
+.cinema-provenance a{font:11px var(--mono);color:var(--mint);white-space:nowrap}
+.cinema-provenance code{font:11px var(--mono);color:#f2c29e}
+.cinema-provenance em{font-style:normal;color:#dcece6}
+.nav nav{gap:23px}
+@media(max-width:1070px){.cinema-main{grid-template-columns:1fr 1fr}.decision-toolbar{flex-direction:column;align-items:flex-start}.cinema-provenance{grid-template-columns:1fr 2fr}.cinema-provenance a{grid-column:2}}
+@media(max-width:850px){.cinema-main{grid-template-columns:1fr}.cinema-story{min-height:0;border-right:0;border-bottom:1px solid var(--line)}.cinema-provenance{grid-template-columns:1fr}.cinema-provenance a{grid-column:1}.radiology-interpretation{grid-template-columns:1fr}.radiology-signature{text-align:left;justify-self:start}.nav nav{gap:15px}}
+@media(max-width:550px){.decision-toolbar,.cinema-story,.cinema-output{padding:22px 18px}.cinema-case-selector button{font-size:9px;padding:9px 10px}.cinema-timebar button b{font-size:8px}.cinema-concept-row{grid-template-columns:120px 1fr 43px;gap:7px;font-size:9px}.radiology-interpretation{padding:22px 18px}.radiology-head{display:block}.radiology-head #reading-phase-tag{display:block;margin-top:10px}.cinema-provenance{padding:18px 0}.decision-theatre .section-head{gap:16px}}
+@media(prefers-reduced-motion:reduce){.cinema-stage-content,.cinema-concept-track i{animation:none}.cinema-prob-track i,.cinema-gate-stack span{transition:none}}
+
+.cinema-mini-note{font:10px var(--mono);line-height:1.4;color:#809faa;margin:9px 0 0}

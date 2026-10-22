@@ -10,29 +10,31 @@ The two supplied case archives contain NIfTI CT images on four contrast phases (
 
 Images use a fixed abdominal CT display window (center 85 HU, width 390 HU). The interface exposes real lesion masks and the available feature annotations. Note that the same image grid in the supplied archives is used for visual overlays; the website is not a separate deformable image-registration experiment.
 
-### Phase-specific intensity evidence
+### Phase-specific intensity evidence and clinical reading
 
-The plotted phase trajectory is the mean of all voxels in the supplied 3-D lesion annotation for each source CT phase. PHORA's published method uses richer descriptors than this single mean: distributional features, local spatial differences, habitat statistics, temporal changes, and radiomics. The chart is an accessible direct illustration of one physiologic component, **not the complete PHORA feature vector**.
+The lesion-enhancement trajectory is calculated as the mean CT intensity across the supplied 3-D lesion annotation for each source CT phase. PHORA uses richer image-derived descriptors than this mean curve, including radiomics, spatial habitats, and phase kinetics.
 
-The amber evidence map is defined at the displayed axial position by the **absolute voxelwise HU difference relative to the DRY phase, masked to the supplied lesion**:
+The active website viewer presents **signed HU changes between successive acquisitions** within the lesion mask: `ART − DRY`, `VEN − ART`, and `DEL − VEN`. Warm-colored pixels represent increasing attenuation, cyan pixels decreasing attenuation, and variations smaller than ±10 HU are suppressed visually. Saturation of the color opacity increases with absolute change up to a 100 HU display span; this does not alter the source intensity data. The proportion of segmented lesion voxels exceeding +10 HU or falling below −10 HU is reported alongside each phase.
 
-\[
-H_p(v) = \mathbf{1}_{v \in \Omega}\; \min\left(1,\;\frac{|I_p(v)-I_{DRY}(v)|}{140}\right)
-\]
+The older `*_heat_*.png` assets are retained as magnitude maps for research comparison; the public viewer uses the separately exported `*_signed_*.png` assets. Maps express imaging contrast, not voxel attribution to PHORA's classification function. Clinical APHE and washout interpretation also depends on relative behavior against liver and on standard acquisition criteria.
 
-The normalized value controls pixel opacity only. It is an image-derived *phase-difference visualization*, **not learned model attention**, gradient attribution, SHAP, a saliency map, a radiologist annotation, or a model explanation. Do not interpret the heatmap as the spatial influence of each voxel on the predicted LI-RADS class.
+### Clinical-feature overlays
 
-### What the two cases cannot show
+Case 1 contains lesion, arterial hyperenhancement, venous washout and delayed washout reference annotations; the phase controls select the matching concept mask. Case 2 contains a lesion mask only. The viewer does not infer concept masks for Case 2.
 
-PHORA makes **a single case-level inference across available phases** rather than issuing a separate clinical category at each phase. Thus, cycling phases illustrates changing imaging evidence, not a changing PHORA category prediction. The two supplied cases are not among the published 59 validation prediction rows provided in `results/validation/phora_predictions.csv`, and the website does not invent their output labels or probabilities. To add genuine per-case predictions, run the repository's feature extraction and frozen model on the exact supplied volumes and record the resulting outputs with their model version. Ground-truth concept masks are never passed directly to the inference model.
+### PHORA case-level predictions
 
-The web assets are research illustrations intended for studying image characteristics. They are not clinical diagnostic images or diagnostic software. The relative HU graphics must not be used for patient care.
+The decision sequence presents five archived PHORA public-validation records. Its complete-input outputs include six clinical concept scores, five burden scores, the direct and factorized special-category gates, the ordinal experts, and the seven class outputs. Phase selectors organize those concept estimates for radiologist interpretation. The published model consumes the full four-phase image representation; the sequence is not an experiment in sequential acquisition or repeated classification after each phase.
+
+CASE00001 and CASE00002 do not occur in the repository's public-validation prediction table. The site therefore illustrates their imaging evidence without assigning PHORA predictions. The separate frozen-model outputs are traced to the named validation records. See `CLINICAL_VISUALIZATION_METHODS.md` for details.
+
+These materials support research interpretation and method communication, not clinical decision-making.
 
 ## Rebuilding the viewer
 
 1. Place the original uploaded ZIPs at `CASE00001.zip` and `CASE00002.zip` in `/mnt/data` (or adapt the paths in `scripts/prepare_ct.py`).
 2. Ensure Python 3.10+, NumPy, SciPy and Pillow are installed. A lightweight NIfTI-1 parser is built into the script; nibabel is not required.
-3. Run `python scripts/prepare_ct.py` from the site package root.
+3. Run `python scripts/prepare_ct.py`, followed by `python scripts/add_signed_maps.py`, from the site package root.
 4. Open `docs/index.html` or deploy the `docs/` directory through GitHub Pages.
 
 The workflow exports a manifest to `docs/assets/case_data.json` and `case_data.js`. The JS mirror permits local file viewing without a fetch/CORS dependency. The complete original CT volumes are intentionally excluded from this website package.

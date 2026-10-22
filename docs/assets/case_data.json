@@ -83,7 +83,30 @@
     "delta_art_dry": 33.0,
     "delta_ven_art": 14.6,
     "delta_del_art": -8.8,
-    "delta_del_ven": -23.4
+    "delta_del_ven": -23.4,
+    "signed_phase_stats": {
+      "ART": {
+        "reference": "DRY",
+        "mean_delta_hu": 33.0,
+        "fraction_increase_10hu": 0.699,
+        "fraction_decrease_10hu": 0.161,
+        "fraction_within_10hu": 0.14
+      },
+      "VEN": {
+        "reference": "ART",
+        "mean_delta_hu": 14.6,
+        "fraction_increase_10hu": 0.559,
+        "fraction_decrease_10hu": 0.218,
+        "fraction_within_10hu": 0.223
+      },
+      "DEL": {
+        "reference": "VEN",
+        "mean_delta_hu": -23.4,
+        "fraction_increase_10hu": 0.136,
+        "fraction_decrease_10hu": 0.672,
+        "fraction_within_10hu": 0.193
+      }
+    }
   },
   "CASE00002": {
     "id": "CASE00002",
@@ -166,6 +189,29 @@
     "delta_art_dry": 46.6,
     "delta_ven_art": 14.9,
     "delta_del_art": -8.4,
-    "delta_del_ven": -23.3
+    "delta_del_ven": -23.3,
+    "signed_phase_stats": {
+      "ART": {
+        "reference": "DRY",
+        "mean_delta_hu": 46.6,
+        "fraction_increase_10hu": 0.787,
+        "fraction_decrease_10hu": 0.109,
+        "fraction_within_10hu": 0.104
+      },
+      "VEN": {
+        "reference": "ART",
+        "mean_delta_hu": 14.9,
+        "fraction_increase_10hu": 0.576,
+        "fraction_decrease_10hu": 0.295,
+        "fraction_within_10hu": 0.129
+      },
+      "DEL": {
+        "reference": "VEN",
+        "mean_delta_hu": -23.3,
+        "fraction_increase_10hu": 0.223,
+        "fraction_decrease_10hu": 0.597,
+        "fraction_within_10hu": 0.18
+      }
+    }
   }
 }
