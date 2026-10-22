@@ -27,3 +27,7 @@ dev = ["jupyter>=1.0", "nbconvert>=7.16", "pytest>=8"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "--import-mode=importlib"
+testpaths = ["tests", "website/tests"]
